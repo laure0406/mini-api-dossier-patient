@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="style2.css">
+  <title>Test API</title>
+</head>
+<body>
+  <header> 
+    <h1>Test API</h1>
+  </header>
+  <main>
+    <div class="zoneButton"> 
+      <button onclick="getAllRecords()" id="but1">Visualiser tous les dossiers patients</button>
+      <button onclick="getRecordById()" id="but2">Visualiser un dossier patient en fonction de son ID</button>
+      <button onclick="createRecord()" id="but3">Créer un dossier patient</button>
+      <button onclick="updateRecord()" id="but4">Mettre à jour un dossier patient</button>
+      <button onclick="deleteRecord()" id="but5">Supprimer un dossier patient à l'aide de son ID</button>
+    </div>
+    <div class="zoneAffichage">
+      <h2> <span id="id"></span> </h2>
+      <div id="allDP" style="display: none;">
+        <select id="dp-select"> 
+          <option value="">--Choisissez un dossier à visualiser--</option>
+        </select>
+        <div id="vizDP" style="display:none;"> 
+          <p>Nom: <input readonly> </p>
+          <p>Age: <input readonly></p>
+          <p>Historique médical: <input readonly></p>
+          <p>Traitement en cours: <input readonly> </p>
+          <p>Allergies: <input readonly></p>
+          <div class="buttonDiv"> <button onclick="remiseDefaut()" id="but1Terminer">Terminer</button></div>
+        </div>
+      </div>
+
+      <div id="DP" style="display: none;">
+        <p>Nom: <input readonly> </p>
+        <p>Age: <input readonly></p>
+        <p>Historique médical: <input readonly></p>
+        <p>Traitement en cours: <input readonly> </p>
+        <p>Allergies: <input 📘></p>
+        <div class="buttonDiv"><button onclick="remiseDefaut()" id="but2Terminer">Terminer</button> </div>
+      </div>
+
+      <div id="createDP" style="display: none;">
+        <!-- <p>ID: <input> </p> -->
+        <p>Nom: <input> </p>
+        <p>Age: <input> </p>
+        <p>Historique médical: <input> </p>
+        <p>Traitement en cours: <input> </p>
+        <p>Allergies: <input></p>
+        <div class="buttonDiv"> <button onclick="createRecord2()" id="buttonCreate" > Valider </button> </div>
+      </div>
+      <div id="modifieDP" style="display: none;">
+        <p>Nom: <input > </p>
+        <p>Age: <input ></p>
+        <p>Historique médical: <input ></p>
+        <p>Traitement en cours: <input > </p>
+        <p>Allergies: <input></p>
+        <div class="buttonDiv"><button onclick="updateRecord2()" id="buttonModif"> Valider </button></div>
+      </div>
+      <div id="deleteDP" style="display: none;">
+        <p>Nom: <input readonly> </p>
+        <p>Age: <input readonly></p>
+        <p>Historique médical: <input readonly></p>
+        <p>Traitement en cours: <input readonly> </p>
+        <p>Allergies: <input readonly></p>
+        <div class="buttonDiv"><button onclick="deleteRecord2()" id="buttonSuppr">Supprimer </button></div>
+      </div>
+    </div>
+  </main>  
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+    "compilerOptions": { //options de compilation ts
+      "target": "ES6", //définition de la version de JS vers laquelle le code TS sera compilé
+      "module": "commonjs", //Spécifie le système de modules utilisé dans le code compilé. (CommonJS format standard utilisé par Node.js.)
+      "rootDir": "./src", //chemin racine
+      "strict": true, //activation des options de vérification
+    },
+    "include": ["src/**/*.ts"], //tous les fichiers doivent être compilés...
+    "exclude": ["node_modules"] //...sauf les dépendances
+  }
+  
